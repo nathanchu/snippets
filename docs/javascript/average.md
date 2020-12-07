@@ -23,7 +23,7 @@ import Snippet from '../snippet'
         ? `const average = (${argsAsArr ? '' : '...'}arr) `
         : `function average(${argsAsArr ? 'arr' : ''}) `
     }${es6 ? '=>' : '{\n  return (\n   '} ${
-      !es6 && !argsAsArr ? 'Array.prototype.reduce.call(arguments, ' : 'arr.reduce'
+      !es6 && !argsAsArr ? 'Array.prototype.reduce.call(arguments, ' : 'arr.reduce('
     }${es6 ? '(' : 'function '}(a, c) ${
       es6 ? '=>' : '{\n      return'
     } a + c${es6 ? '' : '\n    }'}, 0) / ${
